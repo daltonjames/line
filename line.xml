@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="17" x="171" y="82">
+  <block type="oled_cleardisplay" id="17" x="356" y="111">
     <next>
       <block type="controls_whileUntil" id="1" inline="false">
         <field name="MODE">UNTIL</field>
@@ -21,15 +21,57 @@
               </block>
             </value>
             <next>
-              <block type="oled_drawtext" id="6">
-                <field name="TEXT">Middle = </field>
+              <block type="oled_drawtext" id="18">
+                <field name="TEXT">Left = </field>
                 <next>
-                  <block type="oled_drawnumber" id="7" inline="true">
+                  <block type="oled_drawnumber" id="25" inline="true">
                     <value name="NUMBER">
-                      <block type="sensor_line" id="8">
-                        <field name="LINE">MIDDLE</field>
+                      <block type="sensor_line" id="26">
+                        <field name="LINE">LEFT</field>
                       </block>
                     </value>
+                    <next>
+                      <block type="oled_drawtext" id="19">
+                        <field name="TEXT"> Middle = </field>
+                        <next>
+                          <block type="oled_drawnumber" id="23" inline="true">
+                            <value name="NUMBER">
+                              <block type="sensor_line" id="24">
+                                <field name="LINE">MIDDLE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_setcursor" id="20" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="21">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="22">
+                                    <field name="NUM">20</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_drawtext" id="6">
+                                    <field name="TEXT">Right = </field>
+                                    <next>
+                                      <block type="oled_drawnumber" id="7" inline="true">
+                                        <value name="NUMBER">
+                                          <block type="sensor_line" id="8">
+                                            <field name="LINE">RIGHT</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
